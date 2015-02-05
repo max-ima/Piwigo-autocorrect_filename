@@ -1,0 +1,1 @@
+Autocorrect filename of the photo on upload
