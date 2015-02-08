@@ -1,0 +1,1 @@
+Berichtigt automatisch den Dateinamen des Fotos beim Hochladen
