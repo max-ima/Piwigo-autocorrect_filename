@@ -1,0 +1,1 @@
+Automatische correctie van de foto-bestandsnaam bij het uploaden
