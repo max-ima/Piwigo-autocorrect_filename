@@ -1,1 +1,1 @@
-Autocorrige le nom du fichier lors de l'ajout de la photo
+Auto-corrige le nom du fichier lors de l'ajout de la photo
