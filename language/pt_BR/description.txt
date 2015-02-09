@@ -1,0 +1,1 @@
+Correção automática do nome do arquivo da foto no envio
