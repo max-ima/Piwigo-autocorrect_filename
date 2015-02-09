@@ -1,0 +1,1 @@
+Autokorrigerer et fotografis filnavn ved upload.
