@@ -1,0 +1,1 @@
+Corecteaza automat numele fisierului, la incarcarea fotografiei.
