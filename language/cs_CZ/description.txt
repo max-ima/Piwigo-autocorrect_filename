@@ -1,0 +1,1 @@
+automatická oprava názvu souboru po nahrání na server
