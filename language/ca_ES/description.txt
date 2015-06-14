@@ -1,0 +1,1 @@
+Corregeix el nom del fitxer d'una foto automàticament en pujar-lo
