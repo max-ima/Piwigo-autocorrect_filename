@@ -14,14 +14,23 @@ add_event_handler('init', 'autofilename_init');
 function autofilename_init()
 {
   if (
-    isset($_FILES['image'])
+    isset($_FILES)
     and isset($_SERVER["HTTP_USER_AGENT"])
     and preg_match('/\((iPhone|iPad|iPod);/', $_SERVER['HTTP_USER_AGENT'], $matches)
-    and isset($_POST['method'])
-    and 'pwg.images.addSimple' == $_POST['method']
     and !empty($_POST['name'])
     )
   {
-    $_FILES['image']['name'] = stripslashes($_POST['name']).'.'.get_extension($_FILES['image']['name']);
+    if (isset($_POST['method']) and 'pwg.images.addSimple' == $_POST['method'] and isset($_FILES['image']))
+    {
+      $_FILES['image']['name'] = stripslashes($_POST['name']).'.'.get_extension($_FILES['image']['name']);
+    }
+    elseif (isset($_GET['method']) and 'pwg.images.upload' == $_GET['method'] and isset($_FILES['file']))
+    {
+      // photo upload in the new generation iOS application
+      if (strtolower(get_extension($_POST['name'])) != strtolower(get_extension($_FILES['file']['name'])))
+      {
+        $_POST['name'].= '.'.get_extension($_FILES['file']['name']);
+      }
+    }
   }
 }
