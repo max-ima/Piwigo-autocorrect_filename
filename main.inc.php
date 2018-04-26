@@ -32,5 +32,9 @@ function autofilename_init()
         $_POST['name'].= '.'.get_extension($_FILES['file']['name']);
       }
     }
+    elseif (isset($_GET['method']) and 'pwg.images.setInfo' == $_GET['method'] and !empty($_POST['name']))
+    {
+      $_POST['file'] = $_POST['name'].'.'.get_extension($_POST['file']);
+    }
   }
 }
